@@ -34,7 +34,7 @@
       lutris
       mangohud
       megasync
-      nerdfonts
+      # nerdfonts
       obsidian
       # parsec-bin
       protonvpn-gui
@@ -49,7 +49,6 @@
       ungoogled-chromium
       winbox
       wine
-      virtualbox
       vivaldi
       veracrypt
       vlc
