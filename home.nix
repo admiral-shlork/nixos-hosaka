@@ -26,7 +26,7 @@
       firefox-devedition
       floorp
       # gimp
-      gnome.gnome-screenshot
+      gnome-screenshot
       jetbrains.pycharm-community
       keepassxc
       libreoffice
