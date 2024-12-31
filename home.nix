@@ -43,7 +43,7 @@
       signal-desktop
       # soulseekqt
       # soundconverter
-      steam
+      # steam
       telegram-desktop
       thunderbird
       ungoogled-chromium
