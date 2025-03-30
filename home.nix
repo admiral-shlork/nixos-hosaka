@@ -31,6 +31,7 @@
       lutris
       mangohud
       megasync
+      moonlight-qt
       # nerdfonts
       obsidian
       # parsec-bin
