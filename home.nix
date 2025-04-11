@@ -12,7 +12,6 @@
     homeDirectory = "/home/whatever";
     stateVersion = "24.11";
     packages = with pkgs; [
-      arc-browser
       # audacity
       # calibre
       # deadbeef-with-plugins
