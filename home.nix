@@ -3,6 +3,7 @@
 {
   imports =
     [
+      ./home-configuration/gnome-configuration.nix
       ./home-configuration/starship-configuration.nix
     ];
 
@@ -21,8 +22,10 @@
       dropbox
       # easytag
       element-desktop
+      evince
       firefox-devedition-bin
       floorp
+      gnome-screenshot
       gimp
       jetbrains.pycharm-community
       keepassxc
