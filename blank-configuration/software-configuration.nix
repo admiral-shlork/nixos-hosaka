@@ -80,9 +80,11 @@
       yelp
     ]);
 
-  fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
+  fonts.packages = [
+    pkgs.nerd-fonts.fira-code
+    pkgs.nerd-fonts.droid-sans-mono
   ];
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
