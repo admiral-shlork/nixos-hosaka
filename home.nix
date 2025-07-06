@@ -15,6 +15,7 @@
     packages = with pkgs; [
       # audacity
       # calibre
+      code-cursor
       # deadbeef-with-plugins
       # deluge-gtk
       discord
