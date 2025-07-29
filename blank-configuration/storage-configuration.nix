@@ -3,7 +3,7 @@
 {
 boot = {
   # Bootloader
-  initrd.availableKernelModules = [ "ahci" "ata_piix" "ohci_pci" "ehci_pci" "xhci_pci" "nvme" "usb_storage" "sd_mod" "sr_mod" "rtsx_pci_sdmmc" ];
+  initrd.availableKernelModules = [ "ahci" "ata_piix" "ohci_pci" "ehci_pci" "xhci_pci" "nvme" "thunderbolt" "usb_storage" "sd_mod" ];
   initrd.kernelModules = [ "dm-snapshot" ];
   kernelModules = [ "kvm-amd" "8821ce" ];
   # kernelPackages = pkgs.linuxPackages_latest;
@@ -14,7 +14,7 @@ boot = {
   };
 
   initrd.luks.devices = let
-    luks_root_uuid = "97a00e37-3645-4d26-9377-3b8e1866833e";
+    luks_root_uuid = "5180ba8f-582c-4108-8886-34453b167370";
   in {
     # LUKS container with root partition
     "luks-${luks_root_uuid}" = {
