@@ -17,6 +17,10 @@
   ];
 
   dconf.settings = {
+    # Disable trackpoint acceleration
+    "/org/gnome/desktop/peripherals/pointingstick" = {
+      accel-profile = "flat";
+    };
     # Enable location
     "org/gnome/system/location" = {
       enabled = true;
