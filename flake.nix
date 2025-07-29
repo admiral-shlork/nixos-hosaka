@@ -32,7 +32,7 @@
                 useUserPackages = true;
               };
             }
-            nixos-hardware.nixosModules.lenovo-thinkpad-t460s
+            nixos-hardware.nixosModules.lenovo-thinkpad-t14s-amd-gen4
             {
               _module.args.inputs = self.inputs;
             }

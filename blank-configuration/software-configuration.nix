@@ -13,6 +13,9 @@
 
   services.udev.packages = with pkgs; [ gnome-settings-daemon ];
 
+  services.fprintd.enable = true;
+  services.power-profiles-daemon.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "pl";

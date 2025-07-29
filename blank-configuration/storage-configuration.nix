@@ -5,7 +5,7 @@ boot = {
   # Bootloader
   initrd.availableKernelModules = [ "ahci" "ata_piix" "ohci_pci" "ehci_pci" "xhci_pci" "nvme" "usb_storage" "sd_mod" "sr_mod" "rtsx_pci_sdmmc" ];
   initrd.kernelModules = [ "dm-snapshot" ];
-  kernelModules = [ "kvm-intel" "iwlwifi" ];
+  kernelModules = [ "kvm-amd" "8821ce" ];
   # kernelPackages = pkgs.linuxPackages_latest;
   extraModulePackages = [ ];
   loader = {
@@ -24,26 +24,25 @@ boot = {
   };
 };
 
-  # SWAP partition - 927024ce-e001-4f1a-8bd3-15e5474a490b
-  swapDevices =
-    [ { device = "/dev/disk/by-uuid/927024ce-e001-4f1a-8bd3-15e5474a490b"; }
-    ];
+  # swapDevices = [{ 
+  #     device = "/dev/disk/by-uuid/c30a3550-ab3b-4820-afc7-b833f4f3b36c";
+  #     device = "/swapfile";
+  #     size = 64 * 1024;
+  #   }];
 
-  # / partition - 35280608-eb23-474b-837b-98cc9097975f
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/35280608-eb23-474b-837b-98cc9097975f";
-      fsType = "ext4";
-    };
-
-  # /boot partition - 9DEB-F976
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/9DEB-F976";
+    { device = "/dev/disk/by-label/BOOT";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
-  # /home partition - 4010ad96-7dd9-4e5f-8927-540d6f7d4b23
+  
+  fileSystems."/" =
+    { device = "/dev/disk/by-label/root";
+      fsType = "ext4";
+    };
+
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/4010ad96-7dd9-4e5f-8927-540d6f7d4b23";
+    { device = "/dev/disk/by-label/home";
       fsType = "ext4";
     };
 }
