@@ -55,6 +55,9 @@
       vivaldi
       veracrypt
       vlc
+      #vscode
+      #pkgs.vscodium
+      pkgs.stdenv.cc.cc  # Ensure runtime C++ libs are available
       # yacreader
     ];
   };

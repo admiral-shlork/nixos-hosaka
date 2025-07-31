@@ -37,6 +37,7 @@
   environment.systemPackages = with pkgs; [
     appimage-run
     brlaser
+    gcc
     git
     dconf-editor
     ghostty
@@ -47,9 +48,10 @@
     gnomeExtensions.night-theme-switcher
     home-manager
     nh
+    nodejs
     terminator
     vim
-    vscodium
+    #vscodium
     wget
   ];
 
@@ -80,6 +82,7 @@
       snapshot
       tali
       totem
+      vscodium
       yelp
     ]);
 
