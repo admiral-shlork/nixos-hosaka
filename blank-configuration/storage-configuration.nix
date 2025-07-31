@@ -3,10 +3,11 @@
 {
 boot = {
   # Bootloader
-  initrd.availableKernelModules = [ "ahci" "ata_piix" "ohci_pci" "ehci_pci" "xhci_pci" "nvme" "thunderbolt" "usb_storage" "sd_mod" ];
+  initrd.availableKernelModules = [ "ahci" "ata_piix" "ohci_pci" "ehci_pci" "xhci_pci" "nvme" "usb_storage" "sd_mod" ];
   initrd.kernelModules = [ "dm-snapshot" ];
   kernelModules = [ "kvm-amd" "8821ce" ];
-  # kernelPackages = pkgs.linuxPackages_latest;
+  kernelPackages = pkgs.linuxPackages_latest;
+  kernelParams = [ "usbocre.autosuspend=-1" ];
   extraModulePackages = [ ];
   loader = {
     systemd-boot.enable = true;

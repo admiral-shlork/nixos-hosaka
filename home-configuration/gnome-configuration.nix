@@ -105,7 +105,6 @@
         dash-to-panel.extensionUuid
         date-menu-formatter.extensionUuid
         night-theme-switcher.extensionUuid
-        no-overview.extensionUuid
       ];
     };
     # Date-menu-formatter preferences

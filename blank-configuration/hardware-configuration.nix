@@ -15,6 +15,8 @@
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
+  services.hardware.bolt.enable = false;
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
