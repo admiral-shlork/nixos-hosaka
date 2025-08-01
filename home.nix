@@ -21,22 +21,31 @@ in
     homeDirectory = "/home/whatever";
     stateVersion = "25.05";
     packages = with pkgs; [
-      alpaca
       # audacity
       # calibre
-      code-cursor
       # deadbeef-with-plugins
       # deluge-gtk
+      # easytag
+      # nerdfonts
+      # parsec-bin
+      # soulseekqt
+      # soundconverter
+      # steam
+      # yacreader
+      #pkgs.vscodium
+      #vscode
+      alpaca
+      code-cursor
       discord
       docker
       dropbox
-      # easytag
       element-desktop
       evince
       firefox-devedition
       floorp
-      gnome-screenshot
       gimp
+      gnome-screenshot
+      jdk
       jetbrains.pycharm-community
       keepassxc
       libreoffice
@@ -44,30 +53,24 @@ in
       lutris
       mangohud
       megasync
+      mono
       moonlight-qt
-      # nerdfonts
       obsidian
-      # parsec-bin
+      pkgs.stdenv.cc.cc  # Ensure runtime C++ libs are available
       protonvpn-gui
       python3
       python311Packages.pip
       signal-desktop
-      # soulseekqt
-      # soundconverter
-      # steam
       telegram-desktop
       thunderbird
       ungoogled-chromium
+      veracrypt
+      vivaldi
+      vlc
+      vscodiumWrapped
       winbox
       wine
-      vivaldi
-      veracrypt
-      vlc
-      #vscode
-      #pkgs.vscodium
-      vscodiumWrapped
-      pkgs.stdenv.cc.cc  # Ensure runtime C++ libs are available
-      # yacreader
+      xdg-utils
     ];
   };
   programs.bash = {
