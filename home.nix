@@ -1,5 +1,13 @@
 { config, pkgs, lib, ... }:
 
+
+let
+  vscodiumWrapped = pkgs.writeShellScriptBin "codium" ''
+    export LD_LIBRARY_PATH=${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH
+    exec ${pkgs.vscodium}/bin/codium "$@"
+  '';
+in
+
 {
   imports =
     [
@@ -57,6 +65,7 @@
       vlc
       #vscode
       #pkgs.vscodium
+      vscodiumWrapped
       pkgs.stdenv.cc.cc  # Ensure runtime C++ libs are available
       # yacreader
     ];

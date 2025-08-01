@@ -51,7 +51,7 @@
     nodejs
     terminator
     vim
-    #vscodium
+    vscodium
     wget
   ];
 

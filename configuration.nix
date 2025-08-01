@@ -9,6 +9,5 @@
       ./blank-configuration/printing-configuration.nix
       ./blank-configuration/software-configuration.nix
       ./blank-configuration/storage-configuration.nix
-      ./blank-configuration/codium-wrapped.nix
     ];
 }
