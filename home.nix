@@ -36,6 +36,7 @@ in
       #vscode
       aider-chat-full
       alpaca
+      cheese
       code-cursor
       discord
       docker
