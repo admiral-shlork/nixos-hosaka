@@ -34,6 +34,7 @@ in
       # yacreader
       #pkgs.vscodium
       #vscode
+      aider-chat-full
       alpaca
       code-cursor
       discord
@@ -45,6 +46,7 @@ in
       floorp
       gimp
       gnome-screenshot
+      ibm-plex
       jdk
       jetbrains.pycharm-community
       keepassxc
@@ -70,6 +72,7 @@ in
       vscodiumWrapped
       winbox
       wine
+      winetricks
       xdg-utils
     ];
   };
