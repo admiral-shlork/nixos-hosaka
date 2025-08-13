@@ -46,6 +46,7 @@ in
       firefox-devedition
       floorp
       gimp
+      gnome-mahjongg
       gnome-screenshot
       ibm-plex
       jdk
@@ -85,4 +86,5 @@ in
       alias l='ls -CF'
     '';
   };
+  programs.rclone.enable = true;
 }
