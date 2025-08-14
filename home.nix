@@ -35,6 +35,7 @@ in
       #pkgs.vscodium
       #vscode
       aider-chat-full
+      aisleriot
       alpaca
       cheese
       code-cursor
@@ -50,7 +51,7 @@ in
       gnome-screenshot
       ibm-plex
       jdk
-      jetbrains.pycharm-community
+      #jetbrains.pycharm-community
       keepassxc
       libreoffice
       librewolf
