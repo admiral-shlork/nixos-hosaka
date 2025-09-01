@@ -22,7 +22,7 @@ in
     stateVersion = "25.05";
     packages = with pkgs; [
       # audacity
-      # calibre
+      calibre
       # deadbeef-with-plugins
       # deluge-gtk
       # easytag
