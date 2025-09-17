@@ -22,6 +22,7 @@ in
     stateVersion = "25.05";
     packages = with pkgs; [
       # audacity
+      brave
       calibre
       # deadbeef-with-plugins
       # deluge-gtk
