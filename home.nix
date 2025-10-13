@@ -24,7 +24,7 @@ in
       # audacity
       brave
       calibre
-      # deadbeef-with-plugins
+      deadbeef-with-plugins
       # deluge-gtk
       # easytag
       # nerdfonts
