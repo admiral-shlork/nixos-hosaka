@@ -25,11 +25,11 @@ boot = {
   };
 };
 
-  # swapDevices = [{ 
-  #     device = "/dev/disk/by-uuid/c30a3550-ab3b-4820-afc7-b833f4f3b36c";
-  #     device = "/swapfile";
-  #     size = 64 * 1024;
-  #   }];
+  swapDevices = [{ 
+      #device = "/dev/disk/by-label/root";
+      device = "/swapfile";
+      size = 64 * 1024;
+    }];
 
   fileSystems."/boot" =
     { device = "/dev/disk/by-label/BOOT";
