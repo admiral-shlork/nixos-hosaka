@@ -25,8 +25,7 @@ boot = {
   };
 };
 
-  swapDevices = [{ 
-      #device = "/dev/disk/by-label/root";
+  swapDevices = [{
       device = "/swapfile";
       size = 64 * 1024;
     }];
