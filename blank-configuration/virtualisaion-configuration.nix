@@ -1,0 +1,18 @@
+{ config, pkgs, lib, modulesPath, ... }:
+
+{
+  virtualisation = {
+    libvirtd = {
+      enable = true;
+    };
+    docker = {
+      enable = true;
+    };
+    waydroid = {
+      enable = true;
+      enableUserSession = true;
+    };
+  };
+  hardware.nvidia-container-toolkit.enable = true;
+  users.groups.libvirtd.members = ["root" "whatever" ];
+}
