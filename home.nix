@@ -75,6 +75,8 @@ in
       vivaldi
       vlc
       vscodiumWrapped
+      waydroid
+      waydroid-helper
       winbox
       wine
       winetricks
