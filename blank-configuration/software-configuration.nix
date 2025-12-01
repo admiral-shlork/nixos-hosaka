@@ -49,7 +49,6 @@
     home-manager
     nh
     nodejs
-    nvidia-docker
     terminator
     vim
     vscodium
