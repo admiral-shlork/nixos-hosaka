@@ -10,7 +10,6 @@
     };
     waydroid = {
       enable = true;
-      enableUserSession = true;
     };
   };
   hardware.nvidia-container-toolkit.enable = true;
