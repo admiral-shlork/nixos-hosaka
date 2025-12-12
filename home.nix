@@ -43,6 +43,7 @@ in
       discord
       docker
       dropbox
+      easytag
       element-desktop
       evince
       firefox-devedition
