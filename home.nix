@@ -69,6 +69,7 @@ in
       python311Packages.pip
       signal-desktop
       telegram-desktop
+      textpieces
       thunderbird
       ungoogled-chromium
       veracrypt
