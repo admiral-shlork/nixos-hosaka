@@ -24,6 +24,7 @@
 
   programs.firefox.enable = true;
   programs.direnv.enable = true;
+  programs.adb.enable = true;
 
   # Define your user-specific home configuration
   users.users.whatever = {
@@ -79,6 +80,7 @@
       hitori
       iagno
       simple-scan
+      showtime
       snapshot
       tali
       totem

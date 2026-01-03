@@ -24,7 +24,7 @@ in
       # audacity
       brave
       calibre
-      deadbeef-with-plugins
+      # deadbeef-with-plugins
       # deluge-gtk
       # easytag
       # nerdfonts
@@ -47,7 +47,8 @@ in
       element-desktop
       evince
       firefox-devedition
-      floorp
+      floorp-bin
+      fooyin
       gimp
       gnome-mahjongg
       gnome-screenshot
@@ -60,7 +61,7 @@ in
       librewolf
       lutris
       mangohud
-      megasync
+      # megasync
       mono
       moonlight-qt
       obsidian

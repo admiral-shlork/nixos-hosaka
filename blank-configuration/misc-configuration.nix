@@ -29,7 +29,7 @@
   users.users.whatever = {
     isNormalUser = true;
     description = "whatever";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "adbusers" ];
     packages = with pkgs; [
     ];
   };
