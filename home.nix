@@ -45,7 +45,6 @@ in
       dropbox
       easytag
       element-desktop
-      evince
       firefox-devedition
       floorp-bin
       fooyin
