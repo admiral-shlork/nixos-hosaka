@@ -63,6 +63,7 @@ in
       # megasync
       mono
       moonlight-qt
+      nicotine-plus
       obsidian
       pkgs.stdenv.cc.cc  # Ensure runtime C++ libs are available
       protonvpn-gui
