@@ -84,7 +84,6 @@
       snapshot
       tali
       totem
-      vscodium
       yelp
     ]);
 
