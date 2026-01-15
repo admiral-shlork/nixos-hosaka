@@ -70,6 +70,7 @@ in
       python3
       python311Packages.pip
       signal-desktop
+      soundconverter
       telegram-desktop
       textpieces
       thunderbird
