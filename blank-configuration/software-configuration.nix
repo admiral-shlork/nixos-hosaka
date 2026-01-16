@@ -84,6 +84,7 @@
       snapshot
       tali
       totem
+      virt-manager
       yelp
     ]);
 
