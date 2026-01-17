@@ -5,6 +5,9 @@
     libvirtd = {
       enable = true;
     };
+    spiceUSBRedirection = {
+      enable = true;
+    };
     docker = {
       enable = true;
     };
@@ -12,5 +15,6 @@
       enable = true;
     };
   };
+  programs.virt-manager.enable = true;
   users.groups.libvirtd.members = ["root" "whatever" ];
 }
