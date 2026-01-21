@@ -74,7 +74,6 @@ in
       telegram-desktop
       textpieces
       thunderbird
-      ungoogled-chromium
       veracrypt
       vivaldi
       vlc
