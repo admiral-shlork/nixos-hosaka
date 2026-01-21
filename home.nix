@@ -39,7 +39,7 @@ in
       aisleriot
       alpaca
       cheese
-      chromium
+      # chromium
       code-cursor
       discord
       docker
@@ -96,5 +96,5 @@ in
     '';
   };
   programs.rclone.enable = true;
-  programs.chromium.enable = true;
+  # programs.chromium.enable = true;
 }

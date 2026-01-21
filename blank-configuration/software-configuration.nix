@@ -23,7 +23,7 @@
   };
 
   programs.firefox.enable = true;
-  # programs.chromium.enable = true;
+  programs.chromium.enable = true;
   programs.direnv.enable = true;
   programs.adb.enable = true;
 
@@ -39,6 +39,7 @@
   environment.systemPackages = with pkgs; [
     appimage-run
     brlaser
+    chromium
     gcc
     git
     dconf-editor
