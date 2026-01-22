@@ -75,6 +75,7 @@ in
       telegram-desktop
       textpieces
       thunderbird
+      ungoogled-chromium
       veracrypt
       vivaldi
       vlc
@@ -97,4 +98,5 @@ in
   };
   programs.rclone.enable = true;
   # programs.chromium.enable = true;
+  xdg.enable = true;
 }
