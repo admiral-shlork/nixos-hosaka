@@ -53,7 +53,7 @@
     nh
     nodejs
     terminator
-    ungoogled-chromium
+    # ungoogled-chromium
     vim
     vscodium
     wget
