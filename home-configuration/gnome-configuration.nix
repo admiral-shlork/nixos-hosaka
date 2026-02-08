@@ -38,8 +38,8 @@
     # Titlebar customisation, set number of workspaces to 1
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "close:appmenu";
-      action-right-click-titlebar = "minimize";
-      action-middle-click-titlebar = "lower";
+      # action-right-click-titlebar = "minimize";
+      # action-middle-click-titlebar = "lower";
       num-workspaces = 1;
     };
     # Enable active edges for window tiling
