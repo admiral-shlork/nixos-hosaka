@@ -52,7 +52,7 @@ in
       gimp
       gnome-mahjongg
       gnome-screenshot
-      godotPackages_4_5.godot
+      # godotPackages_4_5.godot
       ibm-plex
       jdk
       #jetbrains.pycharm-community
