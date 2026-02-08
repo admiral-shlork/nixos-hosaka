@@ -61,11 +61,6 @@
       command = "ghostty";
       name = "Ghostty";
     };
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
-      binding = "Print";
-      command = "/etc/profiles/per-user/whatever/bin/gnome-screenshot --interactive";
-      name = "Screenshot";
-    };
     "org/gnome/shell/keybindings" = {
         show-screenshot-ui = [];
         toggle-application-view = [ "<Super>space" ];
