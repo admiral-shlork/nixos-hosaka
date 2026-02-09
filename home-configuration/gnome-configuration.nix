@@ -40,7 +40,7 @@
       button-layout = "close:appmenu";
       # action-right-click-titlebar = "minimize";
       # action-middle-click-titlebar = "lower";
-      num-workspaces = 1;
+      # num-workspaces = 1;
     };
     # Enable active edges for window tiling
     "org/gnome/mutter" = {

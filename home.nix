@@ -21,6 +21,7 @@ in
     homeDirectory = "/home/whatever";
     stateVersion = "25.05";
     packages = with pkgs; [
+      antigravity-fhs
       # audacity
       brave
       calibre
@@ -35,7 +36,6 @@ in
       # yacreader
       #pkgs.vscodium
       #vscode
-      aider-chat-full
       aisleriot
       alpaca
       cheese
