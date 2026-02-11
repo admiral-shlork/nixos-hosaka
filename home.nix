@@ -38,6 +38,7 @@ in
       #vscode
       aisleriot
       alpaca
+      chatbox
       cheese
       # chromium
       code-cursor
@@ -81,7 +82,7 @@ in
       vscodiumWrapped
       waydroid
       waydroid-helper
-      winbox
+      winbox4
       wine
       winetricks
       xdg-utils
