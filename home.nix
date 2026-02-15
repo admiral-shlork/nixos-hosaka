@@ -66,10 +66,12 @@ in
       moonlight-qt
       nicotine-plus
       obsidian
+      pandoc
       pkgs.stdenv.cc.cc  # Ensure runtime C++ libs are available
       protonvpn-gui
       python3
       python311Packages.pip
+      remmina
       signal-desktop
       soundconverter
       telegram-desktop
