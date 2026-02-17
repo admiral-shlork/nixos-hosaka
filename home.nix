@@ -53,6 +53,7 @@ in
       gimp
       gnome-mahjongg
       # godotPackages_4_5.godot
+      hamster
       ibm-plex
       jdk
       #jetbrains.pycharm-community
