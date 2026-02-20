@@ -69,7 +69,6 @@
       geary
       gedit
       gnome-calendar
-      gnome-characters
       gnome-connections
       gnome-console
       gnome-contacts
