@@ -68,6 +68,7 @@ in
       nicotine-plus
       obsidian
       pandoc
+      piper-tts
       pkgs.stdenv.cc.cc  # Ensure runtime C++ libs are available
       protonvpn-gui
       python3
