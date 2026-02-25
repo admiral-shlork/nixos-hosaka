@@ -38,6 +38,7 @@ in
       #vscode
       aisleriot
       alpaca
+      alsa-utils
       chatbox
       cheese
       # chromium
