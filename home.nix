@@ -42,7 +42,6 @@ in
       chatbox
       cheese
       # chromium
-      code-cursor
       discord
       docker
       dropbox
