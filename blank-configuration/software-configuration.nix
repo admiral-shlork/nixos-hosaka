@@ -55,7 +55,7 @@
     terminator
     # ungoogled-chromium
     vim
-    vscodium
+    # vscodium
     wget
   ];
 

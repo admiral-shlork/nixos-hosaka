@@ -84,7 +84,8 @@ in
       veracrypt
       vivaldi
       vlc
-      vscodiumWrapped
+      # vscodiumWrapped
+      vscodium-fhs
       waydroid
       waydroid-helper
       winbox4
