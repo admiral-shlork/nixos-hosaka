@@ -77,11 +77,12 @@
       disable-user-extensions = false;
       enabled-extensions = with pkgs.gnomeExtensions; [
         appindicator.extensionUuid
+        burn-my-windows.extensionUuid
         caffeine.extensionUuid
         dash-to-panel.extensionUuid
         date-menu-formatter.extensionUuid
         night-theme-switcher.extensionUuid
-        simpleweather.extensionUuid
+        # simpleweather.extensionUuid
       ];
     };
     # Date-menu-formatter preferences

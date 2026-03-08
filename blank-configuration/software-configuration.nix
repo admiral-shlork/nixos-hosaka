@@ -45,11 +45,12 @@
     dconf-editor
     ghostty
     gnomeExtensions.appindicator
+    gnomeExtensions.burn-my-windows
     gnomeExtensions.caffeine
     gnomeExtensions.dash-to-panel
     gnomeExtensions.date-menu-formatter
     gnomeExtensions.night-theme-switcher
-    gnomeExtensions.simpleweather
+    # gnomeExtensions.simpleweather
     home-manager
     nh
     nodejs
@@ -79,7 +80,7 @@
       gnome-software
       gnome-terminal
       gnome-tour
-      gnome-weather
+      # gnome-weather
       hitori
       iagno
       simple-scan
