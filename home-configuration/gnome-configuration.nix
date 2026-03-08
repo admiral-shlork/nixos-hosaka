@@ -81,6 +81,7 @@
         dash-to-panel.extensionUuid
         date-menu-formatter.extensionUuid
         night-theme-switcher.extensionUuid
+        simpleweather.extensionUuid
       ];
     };
     # Date-menu-formatter preferences

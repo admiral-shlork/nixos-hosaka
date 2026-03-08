@@ -49,6 +49,7 @@
     gnomeExtensions.dash-to-panel
     gnomeExtensions.date-menu-formatter
     gnomeExtensions.night-theme-switcher
+    gnomeExtensions.simpleweather
     home-manager
     nh
     nodejs
