@@ -11,7 +11,7 @@
     docker = {
       enable = true;
       daemon.settings = {
-        "insecure-registries" = ["registry.gitlab.futro:88" "registry.gitlab.futro"];
+        "insecure-registries" = ["registry.futro:88"];
       };
     };
     waydroid = {
