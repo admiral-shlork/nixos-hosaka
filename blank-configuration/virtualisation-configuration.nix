@@ -11,7 +11,7 @@
     docker = {
       enable = true;
       daemon.settings = {
-        "insecure-registries" = ["registry.futro:88"];
+        "insecure-registries" = ["harbor.micro-slab:88"];
       };
     };
     waydroid = {
