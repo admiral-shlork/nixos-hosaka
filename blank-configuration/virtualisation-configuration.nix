@@ -10,7 +10,6 @@
       '';
       qemu = {
         runAsRoot = true;
-        ovmf.enable = true;
         swtpm.enable = false;
       };
     };
