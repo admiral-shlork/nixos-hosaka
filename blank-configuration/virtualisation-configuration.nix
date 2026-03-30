@@ -4,6 +4,7 @@
   virtualisation = {
     libvirtd = {
       enable = true;
+      allowedBridges = [ "virbr0" ];
     };
     spiceUSBRedirection = {
       enable = true;
