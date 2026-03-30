@@ -8,10 +8,11 @@
       extraConfig = ''
         firewall_backend = "nftables"
       '';
-      qemu.verbatimConfig = ''
-        nvram = ["/run/libvirt/nix-ovmf/OVMF_CODE.fd:/run/libvirt/nix-ovmf/OVMF_VARS.fd"]
-        virtiofsd_path = "/run/current-system/sw/bin/virtiofsd"
-      '';
+      qemu = {
+        runAsRoot = true;
+        ovmf.enable = true;
+        swtpm.enable = false;
+      };
     };
     spiceUSBRedirection = {
       enable = true;
@@ -31,4 +32,7 @@
   environment.sessionVariables = {
     LIBVIRT_DEFAULT_URI = "qemu:///system";
   };
+  environment.etc."libvirt/qemu.conf".text = ''
+  virtiofsd_path = "/run/current-system/sw/bin/virtiofsd"
+'';
 }
