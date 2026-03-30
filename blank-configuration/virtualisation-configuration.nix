@@ -31,25 +31,4 @@
   environment.sessionVariables = {
     LIBVIRT_DEFAULT_URI = "qemu:///system";
   };
-
-  # Define the systemd service
-  systemd.services.virtiofsd-vmshare = {
-    description = "virtiofsd shared folder for Windows VM";
-    after = [ "network.target" ];
-    wantedBy = [ "multi-user.target" ];
-
-    serviceConfig = {
-      ExecStart = ''
-        ${pkgs.virtiofsd}/bin/virtiofsd \
-          --socket-path=/run/virtiofsd-vmshare.sock \
-          --shared-dir=/home/whatever/Things/windows_share \
-          --cache=auto
-      '';
-      Restart = "on-failure";
-
-      # virtiofsd needs to run as root or with sufficient caps
-      # to access the socket path under /run
-      User = "root";
-    };
-  };
 }
