@@ -5,6 +5,9 @@
     libvirtd = {
       enable = true;
       allowedBridges = [ "virbr0" ];
+      extraConfig = ''
+        firewall_backend = "nftables"
+      '';
     };
     spiceUSBRedirection = {
       enable = true;
