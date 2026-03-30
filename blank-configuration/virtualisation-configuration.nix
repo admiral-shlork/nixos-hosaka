@@ -8,6 +8,10 @@
       extraConfig = ''
         firewall_backend = "nftables"
       '';
+      qemu.verbatimConfig = ''
+        nvram = ["/run/libvirt/nix-ovmf/OVMF_CODE.fd:/run/libvirt/nix-ovmf/OVMF_VARS.fd"]
+        virtiofsd_path = "/run/current-system/sw/bin/virtiofsd"
+      '';
     };
     spiceUSBRedirection = {
       enable = true;
