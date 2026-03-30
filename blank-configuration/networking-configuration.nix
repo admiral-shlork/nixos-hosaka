@@ -25,4 +25,5 @@
   # networking.firewall.enable = false;
 
   networking.nftables.enable = true;
+  networking.firewall.trustedInterfaces = [ "virbr0" ];
 }
