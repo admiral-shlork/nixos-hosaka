@@ -15,6 +15,7 @@
         swtpm.enable = false;
         verbatimConfig = ''
           virtiofsd_path = "/run/current-system/sw/bin/virtiofsd"
+          vhost_user_dir = "/run/current-system/sw/share/qemu/vhost-user"
         '';
       };
     };
