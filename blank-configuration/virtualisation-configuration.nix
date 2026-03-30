@@ -24,4 +24,7 @@
   };
   programs.virt-manager.enable = true;
   users.groups.libvirtd.members = ["root" "whatever" ];
+  environment.sessionVariables = {
+    LIBVIRT_DEFAULT_URI = "qemu:///system";
+  };
 }
