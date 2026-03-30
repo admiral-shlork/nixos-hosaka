@@ -11,6 +11,7 @@
         log_outputs = "1:file:/tmp/libvirt-debug.log"
       '';
       qemu = {
+        vhostUserPackages = [ pkgs.virtiofsd ];
         runAsRoot = true;
         swtpm.enable = false;
         verbatimConfig = ''
