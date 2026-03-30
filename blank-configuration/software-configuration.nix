@@ -58,6 +58,7 @@
     # ungoogled-chromium
     vim
     # vscodium
+    virtiofsd
     wget
   ];
 
