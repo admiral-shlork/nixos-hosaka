@@ -38,7 +38,7 @@
       ExecStart = ''
         ${pkgs.virtiofsd}/bin/virtiofsd \
           --socket-path=/run/virtiofsd-vmshare.sock \
-          --shared-dir=/home/youruser/vm-share \
+          --shared-dir=/home/whatever/Things/windows_share \
           --cache=auto
       '';
       Restart = "on-failure";
