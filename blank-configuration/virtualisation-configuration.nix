@@ -7,10 +7,15 @@
       allowedBridges = [ "virbr0" ];
       extraConfig = ''
         firewall_backend = "nftables"
+        log_filters = "1:virtiofsd 1:qemu"
+        log_outputs = "1:file:/tmp/libvirt-debug.log"
       '';
       qemu = {
         runAsRoot = true;
         swtpm.enable = false;
+        verbatimConfig = ''
+          virtiofsd_path = "/run/current-system/sw/bin/virtiofsd"
+        '';
       };
     };
     spiceUSBRedirection = {
@@ -31,7 +36,4 @@
   environment.sessionVariables = {
     LIBVIRT_DEFAULT_URI = "qemu:///system";
   };
-  environment.etc."libvirt/qemu.conf".text = ''
-  virtiofsd_path = "/run/current-system/sw/bin/virtiofsd"
-'';
 }
