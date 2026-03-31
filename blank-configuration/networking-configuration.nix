@@ -23,7 +23,8 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-
+  networking.firewall.allowedTCPPorts = [ 9000 ];
+  networking.firewall.allowedUDPPorts = [ ];
   networking.nftables.enable = true;
   networking.firewall.trustedInterfaces = [ "virbr0" ];
 }
