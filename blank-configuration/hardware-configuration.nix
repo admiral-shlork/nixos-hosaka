@@ -11,8 +11,19 @@
   hardware.firmware = [ pkgs.linux-firmware ];
 
   # bluetooth
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        UserspaceHID = true;
+        ClassicBondedOnly = true;
+      };
+      Policy = {
+        AutoEnable = true;
+      };
+    };
+  };
   services.blueman.enable = true;
 
   services.hardware.bolt.enable = false;
