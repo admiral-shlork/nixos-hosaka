@@ -74,6 +74,7 @@ in
       python3
       python311Packages.pip
       remmina
+      session-desktop
       signal-desktop
       soundconverter
       telegram-desktop
