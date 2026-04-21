@@ -87,6 +87,7 @@
       # gnome-weather
       hitori
       iagno
+      obsidian
       simple-scan
       showtime
       snapshot
