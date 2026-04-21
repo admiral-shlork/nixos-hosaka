@@ -57,6 +57,7 @@
     home-manager
     nh
     nodejs
+    obsidian
     terminator
     # ungoogled-chromium
     vim
@@ -87,7 +88,6 @@
       # gnome-weather
       hitori
       iagno
-      obsidian
       simple-scan
       showtime
       snapshot
