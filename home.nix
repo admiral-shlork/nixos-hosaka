@@ -66,7 +66,6 @@ in
       mono
       moonlight-qt
       nicotine-plus
-      obsidian
       pandoc
       piper-tts
       pkgs.stdenv.cc.cc  # Ensure runtime C++ libs are available
@@ -74,7 +73,6 @@ in
       python3
       python311Packages.pip
       remmina
-      session-desktop
       signal-desktop
       soundconverter
       telegram-desktop
