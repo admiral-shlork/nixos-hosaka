@@ -1,7 +1,7 @@
 # Help is available in the configuration.nix(5) man page and 
 # in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Enable the X11 windowing system.
@@ -55,9 +55,11 @@
     gnomeExtensions.night-theme-switcher
     # gnomeExtensions.simpleweather
     home-manager
+    newelle
     nh
     nodejs
     # obsidian
+    opencode
     terminator
     # ungoogled-chromium
     vim
@@ -153,5 +155,6 @@
     # but is otherwise equivalent to using `enabledCollectors` above.
     extraFlags = [ "--collector.ntp.protocol-version=4" "--no-collector.mdadm" ];
   };
-
+  systemd.services.prometheus-node-exporter.serviceConfig.RestrictNamespaces = lib.mkForce false;
+  systemd.services.prometheus-node-exporter.serviceConfig.ProtectHome = lib.mkForce false;
 }
