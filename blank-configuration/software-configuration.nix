@@ -55,7 +55,6 @@
     gnomeExtensions.night-theme-switcher
     # gnomeExtensions.simpleweather
     home-manager
-    newelle
     nh
     nodejs
     # obsidian
