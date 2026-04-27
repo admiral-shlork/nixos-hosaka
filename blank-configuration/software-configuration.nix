@@ -57,7 +57,7 @@
     home-manager
     nh
     nodejs
-    # obsidian
+    obsidian
     opencode
     terminator
     # ungoogled-chromium
