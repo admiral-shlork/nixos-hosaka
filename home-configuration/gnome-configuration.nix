@@ -62,7 +62,6 @@
       name = "Ghostty";
     };
     "org/gnome/shell/keybindings" = {
-        show-screenshot-ui = [];
         toggle-application-view = [ "<Super>space" ];
     };
     "org/gnome/mutter/keybindings" = {
