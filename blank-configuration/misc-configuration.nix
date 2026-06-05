@@ -29,7 +29,7 @@
   users.users.whatever = {
     isNormalUser = true;
     description = "whatever";
-    extraGroups = [ "networkmanager" "wheel" "adbusers" ];
+    extraGroups = [ "docker" "networkmanager" "wheel" "adbusers" ];
     packages = with pkgs; [
     ];
   };
