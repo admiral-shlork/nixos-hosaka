@@ -20,7 +20,7 @@
     LC_PAPER = "en_IE.UTF-8";
     LC_TELEPHONE = "en_IE.UTF-8";
     LC_TIME = "en_IE.UTF-8";
-  };  
+  };
 
   # Configure console keymap
   console.keyMap = "pl2";
@@ -29,6 +29,7 @@
   users.users.whatever = {
     isNormalUser = true;
     description = "whatever";
+    home = "/home/whatever";
     extraGroups = [ "docker" "networkmanager" "wheel" "adbusers" ];
     packages = with pkgs; [
     ];

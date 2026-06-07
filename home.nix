@@ -45,7 +45,6 @@ in
       discord
       docker
       dropbox
-      easytag
       element-desktop
       firefox-devedition
       floorp-bin
@@ -68,7 +67,6 @@ in
       nicotine-plus
       pandoc
       piper-tts
-      pkgs.stdenv.cc.cc  # Ensure runtime C++ libs are available
       protonvpn-gui
       python3
       python311Packages.pip

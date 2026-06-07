@@ -13,7 +13,7 @@
     };
     # Nautilus preferences
     "org/gnome/nautilus/preferences" = {
-      date-time-format = "datailed";
+      date-time-format = "detailed";
       default-folder-view = "list-view";
       show-create-link = true;
       show-delete-permanently = true;
@@ -42,10 +42,10 @@
       # action-middle-click-titlebar = "lower";
       # num-workspaces = 1;
     };
-    # Enable active edges for window tiling
-    "org/gnome/mutter" = {
-      edge-tiling = true;
-    };
+     "org/gnome/mutter" = {
+       edge-tiling = true;
+       experimental-features = [ "scale-monitor-framebuffer" ];
+     };
     # Keyboard bindings
     "org/gnome/settings-daemon/plugins/media-keys" = {
       custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" ];
@@ -101,10 +101,6 @@
     "org/gnome/desktop/peripherals/touchpad" = {
       two-finger-scrolling-enable = true;
       natural-scroll = false;
-    };
-    # Fractional scaling in Gnome
-    "org/gnome/mutter" = {
-      experimental-features = [ "scale-monitor-framebuffer" ];
     };
     "org/gnome/desktop/sound" = {
       allow-volume-above-100-percent = true;
