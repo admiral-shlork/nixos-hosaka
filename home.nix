@@ -1,13 +1,5 @@
 { config, pkgs, lib, ... }:
 
-
-let
-  vscodiumWrapped = pkgs.writeShellScriptBin "codium" ''
-    export LD_LIBRARY_PATH=${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH
-    exec ${pkgs.vscodium}/bin/codium "$@"
-  '';
-in
-
 {
   imports =
     [
@@ -80,7 +72,6 @@ in
       veracrypt
       vivaldi
       vlc
-      # vscodiumWrapped
       vscodium-fhs
       waydroid
       waydroid-helper
@@ -102,3 +93,4 @@ in
   # programs.chromium.enable = true;
   xdg.enable = true;
 }
+
