@@ -1,45 +1,88 @@
-# Help is available in the configuration.nix(5) man page and 
-# in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, lib, ... }:
 
 {
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
-
-  services.udev.packages = with pkgs; [ gnome-settings-daemon ];
-
-  services.fprintd.enable = true;
-  services.power-profiles-daemon.enable = true;
+  services = {
+    xserver = {
+      enable = true;
+      xkb = {
+        layout = "pl";
+        variant = "";
+      };
+    };
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+    udev.packages = with pkgs; [ gnome-settings-daemon ];
+    fprintd.enable = true;
+    power-profiles-daemon.enable = true;
+    prometheus.exporters.node = {
+      enable = true;
+      port = 9000;
+      enabledCollectors = [
+        "cpu"
+        "cpufreq"
+        "diskstats"
+        "ethtool"
+        "filesystem"
+        "hwmon"
+        "loadavg"
+        "meminfo"
+        "nvme"
+        "os"
+        "softirqs"
+        "systemd"
+        "vmstat"
+        "wifi"
+      ];
+      extraFlags = [ "--collector.ntp.protocol-version=4" "--no-collector.mdadm" ];
+    };
+  };
 
   gtk.iconCache.enable = true;
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "pl";
-    variant = "";
+  programs = {
+    firefox.enable = true;
+    # chromium.enable = true;
+    direnv.enable = true;
+    adb.enable = true;
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+      dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+      localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+    };
   };
 
-  programs.firefox.enable = true;
-  # programs.chromium.enable = true;
-  programs.direnv.enable = true;
-  programs.adb.enable = true;
-  
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    # audacity
     adwaita-icon-theme
+    aisleriot
+    alsa-utils
+    antigravity-fhs
     appimage-run
+    brave
     brlaser
-    # chromium
-    gcc
-    git
+    calibre
+    chatbox
+    cheese
+    chromium
     dconf-editor
+    # deadbeef-with-plugins
+    # deluge-gtk
+    discord
+    docker
+    dropbox
+    easytag
+    element-desktop
+    firefox-devedition
+    floorp-bin
+    fooyin
+    gcc
     ghostty
+    gimp
+    git
+    gnome-mahjongg
     gnomeExtensions.appindicator
     gnomeExtensions.burn-my-windows
     gnomeExtensions.caffeine
@@ -47,17 +90,54 @@
     gnomeExtensions.date-menu-formatter
     gnomeExtensions.night-theme-switcher
     # gnomeExtensions.simpleweather
+    hamster
     home-manager
+    ibm-plex
+    jdk
+    # jetbrains.pycharm-community
+    keepassxc
+    libreoffice
+    librewolf
+    lutris
+    mangohud
+    # megasync
+    mono
+    moonlight-qt
+    # nerdfonts
     nh
+    nicotine-plus
     nodejs
     obsidian
     opencode
+    pandoc
+    # parsec-bin
+    piper-tts
+    protonvpn-gui
+    python3
+    python311Packages.pip
+    remmina
+    signal-desktop
+    soundconverter
+    steam
+    telegram-desktop
     terminator
-    # ungoogled-chromium
+    textpieces
+    thunderbird
+    veracrypt
     vim
-    # vscodium
     virtiofsd
+    vivaldi
+    vlc
+    vscodium-fhs
+    # vscode-fhs
     wget
+    waydroid
+    waydroid-helper
+    winbox4
+    wine
+    winetricks
+    xdg-utils
+    # yacreader
   ];
 
   environment.gnome.excludePackages =
@@ -96,7 +176,6 @@
     pkgs.nerd-fonts.droid-sans-mono
   ];
 
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -105,48 +184,9 @@
   #   enableSSHSupport = true;
   # };
 
-  # List services that you want to enable:
-
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
-  };
-
-  # https://nixos.org/manual/nixos/stable/#module-services-prometheus-exporters
-  # https://github.com/NixOS/nixpkgs/blob/nixos-24.05/nixos/modules/services/monitoring/prometheus/exporters.nix
-  services.prometheus.exporters.node = {
-    enable = true;
-    port = 9000;
-    # For the list of available collectors, run, depending on your install:
-    # - Flake-based: nix run nixpkgs#prometheus-node-exporter -- --help
-    # - Classic: nix-shell -p prometheus-node-exporter --run "node_exporter --help"
-    enabledCollectors = [
-      "cpu"
-      "cpufreq"
-      "diskstats"
-      "ethtool"   
-      "filesystem"
-      "hwmon"
-      "loadavg"
-      "meminfo"
-      "nvme"
-      "os"
-      "softirqs"
-      "systemd"
-      "vmstat"
-      "wifi"
-    ];
-    # You can pass extra options to the exporter using `extraFlags`, e.g.
-    # to configure collectors or disable those enabled by default.
-    # Enabling a collector is also possible using "--collector.[name]",
-    # but is otherwise equivalent to using `enabledCollectors` above.
-    extraFlags = [ "--collector.ntp.protocol-version=4" "--no-collector.mdadm" ];
-  };
   systemd.services.prometheus-node-exporter.serviceConfig.RestrictNamespaces = lib.mkForce false;
   systemd.services.prometheus-node-exporter.serviceConfig.ProtectHome = lib.mkForce false;
 }
