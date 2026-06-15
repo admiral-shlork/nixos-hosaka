@@ -107,7 +107,7 @@
     nh
     nicotine-plus
     nodejs
-    obsidian
+    # obsidian
     opencode
     pandoc
     # parsec-bin
