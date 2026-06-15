@@ -43,7 +43,6 @@
     firefox.enable = true;
     # chromium.enable = true;
     direnv.enable = true;
-    adb.enable = true;
     steam = {
       enable = true;
       remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
@@ -59,6 +58,7 @@
     adwaita-icon-theme
     aisleriot
     alsa-utils
+    android-tools
     antigravity-fhs
     appimage-run
     brave
@@ -91,6 +91,7 @@
     gnomeExtensions.night-theme-switcher
     # gnomeExtensions.simpleweather
     hamster
+    hicolor-icon-theme
     home-manager
     ibm-plex
     jdk
@@ -107,14 +108,14 @@
     nh
     nicotine-plus
     nodejs
-    # obsidian
+    obsidian
     opencode
     pandoc
     # parsec-bin
     piper-tts
-    protonvpn-gui
+    plezy
+    proton-vpn
     python3
-    python311Packages.pip
     remmina
     signal-desktop
     soundconverter
