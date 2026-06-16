@@ -18,7 +18,7 @@
     };
     kernelModules = [ "kvm-amd" "8821ce" ];
     kernelPackages = pkgs.linuxPackages_latest;
-    kernelParams = [ "usbocre.autosuspend=-1" "amdgpu.reset=1"];
+    kernelParams = [ "usbcore.autosuspend=-1" "amdgpu.reset=1"];
     extraModulePackages = [ ];
     loader = {
       systemd-boot.enable = true;
