@@ -2,7 +2,6 @@
 
 {
 boot = {
-  # Bootloader
   initrd.availableKernelModules = [ "ahci" "ata_piix" "ohci_pci" "ehci_pci" "xhci_pci" "nvme" "usb_storage" "sd_mod" ];
   initrd.kernelModules = [ "dm-snapshot" ];
   initrd.systemd.enable = true;
