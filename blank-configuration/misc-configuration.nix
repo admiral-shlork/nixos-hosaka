@@ -1,13 +1,13 @@
 { pkgs, ... }:
 
 {
-  # Enable Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings = {
+    experimental-features = [ "nix-command" "flakes" ];
+    download-buffer-size = 524288000;
+  };
 
-  # Set your time zone.
   time.timeZone = "Europe/Dublin";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -22,10 +22,8 @@
     LC_TIME = "en_IE.UTF-8";
   };
 
-  # Configure console keymap
   console.keyMap = "pl2";
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.whatever = {
     isNormalUser = true;
     description = "whatever";
@@ -35,7 +33,6 @@
     ];
   };
 
-  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # This value determines the NixOS release from which the default
