@@ -6,12 +6,6 @@
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-
-    # use the following for unstable:
-    # nixpkgs.url = "nixpkgs/nixos-unstable";
-
-    # or any branch you want:
-    # nixpkgs.url = "nixpkgs/{BRANCH-NAME}";
   };
 
   outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }:

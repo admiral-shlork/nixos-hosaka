@@ -37,7 +37,7 @@
     };
   };
 
-  gtk.iconCache.enable = true;
+  gtk.iconCache.enable = false;
 
   programs = {
     firefox.enable = true;
@@ -54,13 +54,13 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    # audacity
     adwaita-icon-theme
     aisleriot
     alsa-utils
     android-tools
     antigravity-fhs
     appimage-run
+    # audacity
     brave
     brlaser
     calibre

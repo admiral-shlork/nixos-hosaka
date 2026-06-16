@@ -6,11 +6,6 @@
     "org/gnome/desktop/peripherals/pointingstick" = {
       accel-profile = "flat";
     };
-    # Enable location
-    "org/gnome/system/location" = {
-      enabled = true;
-      max-accuracy-level = "exact";
-    };
     # Nautilus preferences
     "org/gnome/nautilus/preferences" = {
       date-time-format = "detailed";
@@ -24,7 +19,6 @@
     # Desktop background
     "org/gnome/desktop/background" = {
       picture-options = "none";
-      #primary-color = "#282828";
       primary-color = "#000000";
     };
     # Disable lock screen notifications
@@ -60,9 +54,6 @@
       binding = "<Super>w";
       command = "ghostty";
       name = "Ghostty";
-    };
-    "org/gnome/shell/keybindings" = {
-        toggle-application-view = [ "<Super>space" ];
     };
     "org/gnome/mutter/keybindings" = {
       toggle-tiled-left = [ "<Alt><Super>j" ];
