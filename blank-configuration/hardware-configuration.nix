@@ -1,8 +1,6 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-
   hardware = {
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     enableAllFirmware = true;
@@ -23,9 +21,9 @@
   };
 
   services = {
+    printing.enable = true;
     blueman.enable = true;
     hardware.bolt.enable = false;
-    printing.enable = true;
     pulseaudio.enable = false;
     pipewire = {
       enable = true;
@@ -34,8 +32,6 @@
       pulse.enable = true;
     };
   };
-  security.rtkit.enable = true;
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  security.rtkit.enable = true;
 }

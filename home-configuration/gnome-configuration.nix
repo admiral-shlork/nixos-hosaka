@@ -2,11 +2,9 @@
 
 {
   dconf.settings = {
-    # Disable trackpoint acceleration
     "org/gnome/desktop/peripherals/pointingstick" = {
       accel-profile = "flat";
     };
-    # Nautilus preferences
     "org/gnome/nautilus/preferences" = {
       date-time-format = "detailed";
       default-folder-view = "list-view";
@@ -16,12 +14,10 @@
     "org/gnome/nautilus/icon-view" = {
       captions = [ "size" "type" "none" ];
     };
-    # Desktop background
     "org/gnome/desktop/background" = {
       picture-options = "none";
       primary-color = "#000000";
     };
-    # Disable lock screen notifications
     "org/gnome/desktop/notifications" = {
       show-in-lock-screen = false;
     };
@@ -29,18 +25,15 @@
     "org/gnome/desktop/calendar" = {
       show-weekdate = true;
     };
-    # Titlebar customisation, set number of workspaces to 1
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "close:appmenu";
       # action-right-click-titlebar = "minimize";
       # action-middle-click-titlebar = "lower";
-      # num-workspaces = 1;
     };
      "org/gnome/mutter" = {
        edge-tiling = true;
        experimental-features = [ "scale-monitor-framebuffer" ];
      };
-    # Keyboard bindings
     "org/gnome/settings-daemon/plugins/media-keys" = {
       custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" ];
       screensaver = [ "<Control><Super>q" ];
@@ -62,7 +55,6 @@
     "org/gnome/desktop/wm/keybindings" = {
       toggle-maximized = [ "<Alt><Super>k" ];
     };
-    # Enabled extensions
     "org/gnome/shell" = {
       disable-user-extensions = false;
       enabled-extensions = with pkgs.gnomeExtensions; [
@@ -75,20 +67,17 @@
         # simpleweather.extensionUuid
       ];
     };
-    # Date-menu-formatter preferences
     "org/gnome/shell/extensions/date-menu-formatter" = {
       pattern = "dd\nMM\nyy\nE\nHH\nmm\nss";
       text-align = "right";
       update-level = "2";
     };
-    # Caffeine preferences
     "org/gnome/shell/extensions/caffeine" = {
       indicator-position-max = "2";
       restore-state = true;
       show-indicator = "always";
       show-notifications = false;
     };
-    # Disable natural scrolling on a trackpoint and enable two finger scrolling
     "org/gnome/desktop/peripherals/touchpad" = {
       two-finger-scrolling-enable = true;
       natural-scroll = false;

@@ -41,7 +41,7 @@
 
   programs = {
     firefox.enable = true;
-    # chromium.enable = true;
+    chromium.enable = true;
     direnv.enable = true;
     steam = {
       enable = true;
@@ -53,96 +53,93 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    adwaita-icon-theme
-    aisleriot
-    alsa-utils
-    android-tools
-    antigravity-fhs
-    appimage-run
-    # audacity
-    brave
-    brlaser
-    calibre
-    chatbox
-    cheese
-    chromium
-    dconf-editor
-    # deadbeef-with-plugins
-    # deluge-gtk
-    discord
-    docker
-    dropbox
-    easytag
-    element-desktop
-    firefox-devedition
-    floorp-bin
-    fooyin
-    gcc
-    ghostty
-    gimp
-    git
-    gnome-mahjongg
-    gnomeExtensions.appindicator
-    gnomeExtensions.burn-my-windows
-    gnomeExtensions.caffeine
-    gnomeExtensions.dash-to-panel
-    gnomeExtensions.date-menu-formatter
-    gnomeExtensions.night-theme-switcher
-    # gnomeExtensions.simpleweather
-    hamster
-    hicolor-icon-theme
-    home-manager
-    ibm-plex
-    jdk
-    # jetbrains.pycharm-community
-    keepassxc
-    libreoffice
-    librewolf
-    lutris
-    mangohud
-    # megasync
-    mono
-    moonlight-qt
-    # nerdfonts
-    nh
-    nicotine-plus
-    nodejs
-    obsidian
-    opencode
-    pandoc
-    # parsec-bin
-    piper-tts
-    plezy
-    proton-vpn
-    python3
-    remmina
-    signal-desktop
-    soundconverter
-    steam
-    telegram-desktop
-    terminator
-    textpieces
-    thunderbird
-    veracrypt
-    vim
-    virtiofsd
-    vivaldi
-    vlc
-    vscodium-fhs
-    # vscode-fhs
-    wget
-    waydroid
-    waydroid-helper
-    winbox4
-    wine
-    winetricks
-    xdg-utils
-    # yacreader
-  ];
-
-  environment.gnome.excludePackages =
-    (with pkgs; [
+  environment = {
+    systemPackages = with pkgs; [
+      adwaita-icon-theme
+      aisleriot
+      alsa-utils
+      android-tools
+      antigravity-fhs
+      appimage-run
+      # audacity
+      brave
+      brlaser
+      calibre
+      chatbox
+      cheese
+      chromium
+      dconf-editor
+      # deadbeef-with-plugins
+      # deluge-gtk
+      discord
+      docker
+      dropbox
+      easytag
+      element-desktop
+      firefox-devedition
+      floorp-bin
+      fooyin
+      gcc
+      ghostty
+      gimp
+      git
+      gnome-mahjongg
+      gnomeExtensions.appindicator
+      gnomeExtensions.burn-my-windows
+      gnomeExtensions.caffeine
+      gnomeExtensions.dash-to-panel
+      gnomeExtensions.date-menu-formatter
+      gnomeExtensions.night-theme-switcher
+      # gnomeExtensions.simpleweather
+      hamster
+      hicolor-icon-theme
+      home-manager
+      ibm-plex
+      jdk
+      # jetbrains.pycharm-community
+      keepassxc
+      libreoffice
+      librewolf
+      lutris
+      mangohud
+      # megasync
+      mono
+      moonlight-qt
+      nh
+      nicotine-plus
+      nodejs
+      obsidian
+      opencode
+      pandoc
+      # parsec-bin
+      piper-tts
+      plezy
+      proton-vpn
+      python3
+      remmina
+      signal-desktop
+      soundconverter
+      steam
+      telegram-desktop
+      terminator
+      textpieces
+      thunderbird
+      veracrypt
+      vim
+      virtiofsd
+      vivaldi
+      vlc
+      vscodium-fhs
+      wget
+      waydroid
+      waydroid-helper
+      winbox4
+      wine
+      winetricks
+      xdg-utils
+      # yacreader
+    ];
+    gnome.excludePackages = (with pkgs; [
       atomix
       cheese
       decibels
@@ -171,23 +168,15 @@
       virt-manager
       yelp
     ]);
+  };
 
   fonts.packages = [
     pkgs.nerd-fonts.fira-code
     pkgs.nerd-fonts.droid-sans-mono
   ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  systemd.services.prometheus-node-exporter.serviceConfig.RestrictNamespaces = lib.mkForce false;
-  systemd.services.prometheus-node-exporter.serviceConfig.ProtectHome = lib.mkForce false;
+  systemd.services.prometheus-node-exporter.serviceConfig = {
+    RestrictNamespaces = lib.mkForce false;
+    ProtectHome = lib.mkForce false;
+  };
 }
