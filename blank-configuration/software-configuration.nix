@@ -71,6 +71,7 @@
       dconf-editor
       # deadbeef-with-plugins
       # deluge-gtk
+      direnv
       discord
       docker
       dropbox
