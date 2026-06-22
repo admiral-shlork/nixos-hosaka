@@ -21,7 +21,6 @@
     "org/gnome/desktop/notifications" = {
       show-in-lock-screen = false;
     };
-    # Show weekday in calendar
     "org/gnome/desktop/calendar" = {
       show-weekdate = true;
     };
