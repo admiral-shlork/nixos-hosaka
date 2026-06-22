@@ -100,7 +100,7 @@
       # jetbrains.pycharm-community
       keepassxc
       libreoffice
-      librewolf
+      # librewolf
       lutris
       mangohud
       # megasync
