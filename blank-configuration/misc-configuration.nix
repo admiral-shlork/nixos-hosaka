@@ -35,8 +35,7 @@
     description = "whatever";
     home = "/home/whatever";
     extraGroups = [ "docker" "networkmanager" "wheel" "adbusers" ];
-    packages = with pkgs; [
-    ];
+    packages = with pkgs; [ ];
   };
 
   # This value determines the NixOS release from which the default
