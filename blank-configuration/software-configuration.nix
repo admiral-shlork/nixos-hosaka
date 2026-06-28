@@ -117,6 +117,7 @@
       python3
       remmina
       signal-desktop
+      simplex-chat-desktop
       soundconverter
       steam
       telegram-desktop
