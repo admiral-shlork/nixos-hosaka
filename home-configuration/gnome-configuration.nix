@@ -5,6 +5,9 @@
     "org/gnome/desktop/peripherals/pointingstick" = {
       accel-profile = "flat";
     };
+    "org/gnome/desktop/interface" = {
+      gtk-enable-primary-paste = "true";
+    };
     "org/gnome/nautilus/preferences" = {
       date-time-format = "detailed";
       default-folder-view = "list-view";
