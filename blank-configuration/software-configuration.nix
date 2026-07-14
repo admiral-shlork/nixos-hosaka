@@ -82,6 +82,7 @@
       ghostty
       gimp
       git
+      gh
       gnome-mahjongg
       gnomeExtensions.appindicator
       gnomeExtensions.burn-my-windows
