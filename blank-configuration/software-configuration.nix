@@ -100,6 +100,7 @@
       keepassxc
       libreoffice
       # librewolf
+      losslesscut-bin
       lutris
       mangohud
       # megasync
