@@ -61,6 +61,7 @@
       appimage-run
       # audacity
       brave
+      brave-origin
       brlaser
       calibre
       chatbox
