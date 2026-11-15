@@ -61,7 +61,7 @@
       appimage-run
       # audacity
       brave
-      brave-origin
+      pkgsUnstable.brave-origin
       brlaser
       calibre
       chatbox
@@ -100,19 +100,20 @@
       jdk
       # jetbrains.pycharm-community
       keepassxc
+      kubectl
       libreoffice
-      # librewolf
+      librewolf
       pkgsUnstable.lmstudio
       losslesscut-bin
       lutris
       mangohud
       # megasync
       mono
-      moonlight-qt
+      pkgsUnstable.moonlight-qt
       nh
       nicotine-plus
       nodejs
-      obsidian
+      pkgsUnstable.obsidian
       pkgsUnstable.opencode
       pandoc
       # parsec-bin
@@ -135,7 +136,7 @@
       virtiofsd
       vivaldi
       vlc
-      vscodium-fhs
+      pkgsUnstable.vscodium-fhs
       wget
       waydroid
       waydroid-helper
