@@ -1,21 +1,20 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, osConfig, ... }:
+
+let
+  hostName = osConfig.networking.hostName;
+in
 
 {
-  imports =
-    [
-      ./home-configuration/gnome-configuration.nix
-      ./home-configuration/starship-configuration.nix
-    ];
+  imports = [ ./home/starship.nix ] ++ lib.optionals (hostName == "hosaka") [ ./home/hosaka.nix ];
 
   # Home Manager configuration options go here
   home = {
     username = "whatever";
     homeDirectory = "/home/whatever";
     stateVersion = "25.05";
-    packages = with pkgs; [
-      # btop
-    ];
+    packages = with pkgs; [ ];
   };
+
   programs.bash = {
     enable = true;
     initExtra = ''
@@ -24,19 +23,4 @@
       alias l='ls -CF'
     '';
   };
-  programs.rclone.enable = true;
-  # programs.chromium.enable = true;
-  xdg.enable = true;
-
-  gtk = {
-    enable = true;
-    #Icon Theme
-    iconTheme = {
-      package = pkgs.adwaita-icon-theme;
-      name = "Adwaita";
-      # package = pkgs.kdePackages.breeze-icons;
-      # name = "Breeze-Dark";
-    };
-  };
 }
-

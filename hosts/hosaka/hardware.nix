@@ -13,21 +13,18 @@
           UserspaceHID = true;
           ClassicBondedOnly = true;
         };
-        Policy = {
-          AutoEnable = true;
-        };
+        Policy.AutoEnable = true;
       };
     };
   };
 
   services = {
-    printing.enable = true;
-    blueman.enable = true;
     hardware.bolt.enable = false;
+    blueman.enable = true;
     pulseaudio.enable = false;
     pipewire = {
       enable = true;
-      alsa = { 
+      alsa = {
         enable = true;
         support32Bit = true;
       };

@@ -1,4 +1,4 @@
-{ config, lib, modulesPath, pkgs, ... }:
+{ config, pkgs, lib, modulesPath, ... }:
 
 {
   virtualisation = {
@@ -20,22 +20,19 @@
         '';
       };
     };
-    spiceUSBRedirection = {
-      enable = true;
-    };
+    spiceUSBRedirection.enable = true;
     docker = {
       enable = true;
       daemon.settings = {
         "insecure-registries" = ["registry.futro"];
       };
     };
-    waydroid = {
-      enable = true;
-    };
+    waydroid.enable = true;
   };
+
   programs.virt-manager.enable = true;
-  users.groups.libvirtd.members = ["root" "whatever" ];
-  environment.sessionVariables = {
-    LIBVIRT_DEFAULT_URI = "qemu:///system";
-  };
+
+  users.groups.libvirtd.members = [ "root" "whatever" ];
+
+  environment.sessionVariables.LIBVIRT_DEFAULT_URI = "qemu:///system";
 }

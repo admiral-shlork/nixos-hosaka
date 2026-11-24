@@ -14,27 +14,6 @@
     udev.packages = with pkgs; [ gnome-settings-daemon ];
     fprintd.enable = true;
     power-profiles-daemon.enable = true;
-    prometheus.exporters.node = {
-      enable = true;
-      port = 9000;
-      enabledCollectors = [
-        "cpu"
-        "cpufreq"
-        "diskstats"
-        "ethtool"
-        "filesystem"
-        "hwmon"
-        "loadavg"
-        "meminfo"
-        "nvme"
-        "os"
-        "softirqs"
-        "systemd"
-        "vmstat"
-        "wifi"
-      ];
-      extraFlags = [ "--collector.ntp.protocol-version=4" "--no-collector.mdadm" ];
-    };
   };
 
   gtk.iconCache.enable = false;
@@ -183,9 +162,4 @@
     pkgs.nerd-fonts.fira-code
     pkgs.nerd-fonts.droid-sans-mono
   ];
-
-  systemd.services.prometheus-node-exporter.serviceConfig = {
-    RestrictNamespaces = lib.mkForce false;
-    ProtectHome = lib.mkForce false;
-  };
 }

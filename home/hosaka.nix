@@ -1,6 +1,21 @@
 { config, lib, pkgs, ... }:
 
 {
+  xdg.enable = true;
+
+  gtk = {
+    enable = true;
+    # Icon Theme
+    iconTheme = {
+      package = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
+      # package = pkgs.kdePackages.breeze-icons;
+      # name = "Breeze-Dark";
+    };
+  };
+
+  programs.rclone.enable = true;
+
   dconf.settings = {
     "org/gnome/desktop/peripherals/pointingstick" = {
       accel-profile = "flat";
@@ -32,10 +47,10 @@
       # action-right-click-titlebar = "minimize";
       # action-middle-click-titlebar = "lower";
     };
-     "org/gnome/mutter" = {
-       edge-tiling = true;
-       experimental-features = [ "scale-monitor-framebuffer" ];
-     };
+    "org/gnome/mutter" = {
+      edge-tiling = true;
+      experimental-features = [ "scale-monitor-framebuffer" ];
+    };
     "org/gnome/settings-daemon/plugins/media-keys" = {
       custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" ];
       screensaver = [ "<Control><Super>q" ];
@@ -87,5 +102,5 @@
     "org/gnome/desktop/sound" = {
       allow-volume-above-100-percent = true;
     };
-  };  
+  };
 }
