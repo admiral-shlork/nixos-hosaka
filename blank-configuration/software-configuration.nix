@@ -78,6 +78,7 @@
       dropbox
       easytag
       element-desktop
+      ffmpeg
       firefox-devedition
       floorp-bin
       fooyin
