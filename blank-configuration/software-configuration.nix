@@ -82,8 +82,9 @@
       firefox-devedition
       floorp-bin
       fooyin
+      gajim
       gcc
-      ghostty
+      pkgsUnstable.ghostty
       gimp
       git
       gh
@@ -96,6 +97,7 @@
       gnomeExtensions.night-theme-switcher
       # gnomeExtensions.simpleweather
       hamster
+      pkgsUnstable.handy
       hicolor-icon-theme
       home-manager
       ibm-plex
@@ -145,6 +147,8 @@
       winbox4
       wine
       winetricks
+      wl-clipboard
+      ydotool
       xdg-utils
       # yacreader
     ];
